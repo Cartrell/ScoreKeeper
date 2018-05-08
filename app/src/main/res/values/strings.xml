@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Space Invaders</string>
+    <string name="player1">player 1</string>
+    <string name="player2">player 2</string>
+    <string name="score">score</string>
+    <string name="lives">lives</string>
+    <string name="waveStatus">wave: %1$d\naliens left: %2$d</string>
+    <string name="alienS">s alien (%1$d)</string>
+    <string name="alienM">m alien (%1$d)</string>
+    <string name="alienX">x alien (%1$d)</string>
+    <string name="bonusOn">bonus on</string>
+    <string name="bonusOff">bonus off</string>
+    <string name="lost">lost</string>
+    <string name="winner">winner!</string>
+    <string name="tied">tied!?</string>
+    <string name="reset">reset</string>
+</resources>

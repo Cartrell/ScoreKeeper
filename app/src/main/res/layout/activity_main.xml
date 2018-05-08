@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!-- ========================================== -->
+        <!-- background -->
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/player_layouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- ========================================== -->
+            <!-- player 1 layout -->
+            <!-- ========================================== -->
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <!-- =================================== -->
+                <!-- player label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:text="@string/player1"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- score label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/score"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- score value text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtScore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- lives label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lives"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- lives value text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtLives1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- alien buttons -->
+                <Button
+                    android:id="@+id/btnAlienS1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienS"
+                    android:onClick="onAlienSClick"
+                    />
+
+                <Button
+                    android:id="@+id/btnAlienM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienM"
+                    android:onClick="onAlienMClick"
+                    />
+
+                <Button
+                    android:id="@+id/btnAlienX1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienX"
+                    android:onClick="onAlienXClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- bonus button -->
+                <Button
+                    android:id="@+id/btnBonus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bonusOn"
+                    android:onClick="onBonusClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- lost button -->
+                <Button
+                    android:id="@+id/btnLost1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lost"
+                    android:onClick="onLostClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- result text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtResult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:text="@string/winner"
+                    android:textAllCaps="true"
+                    android:textColor="#ffff00"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+            <!-- ========================================== -->
+            <!-- players divider -->
+            <!-- ========================================== -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="#a0a0a0" />
+
+            <!-- ========================================== -->
+            <!-- player 2 layout -->
+            <!-- ========================================== -->
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <!-- =================================== -->
+                <!-- player label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:text="@string/player2"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- score label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/score"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- score value text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- lives label text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lives"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- lives value text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtLives2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- =================================== -->
+                <!-- alien buttons -->
+                <Button
+                    android:id="@+id/btnAlienS2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienS"
+                    android:onClick="onAlienSClick"
+                    />
+
+                <Button
+                    android:id="@+id/btnAlienM2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienM"
+                    android:onClick="onAlienMClick"
+                    />
+
+                <Button
+                    android:id="@+id/btnAlienX2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/alienX"
+                    android:onClick="onAlienXClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- bonus button -->
+                <Button
+                    android:id="@+id/btnBonus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bonusOn"
+                    android:onClick="onBonusClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- lost button -->
+                <Button
+                    android:id="@+id/btnLost2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lost"
+                    android:onClick="onLostClick"
+                    />
+
+                <!-- =================================== -->
+                <!-- result text -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtResult2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:text="@string/winner"
+                    android:textAllCaps="true"
+                    android:textColor="#ffff00"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- ========================================== -->
+        <!-- wave status text -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtWaveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player_layouts"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:text="@string/waveStatus"
+            android:textAllCaps="true"
+            android:textColor="#00ff00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <!-- ========================================== -->
+        <!-- reset button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWaveStatus"
+            android:layout_centerHorizontal="true"
+            android:text="@string/reset"
+            android:textStyle="bold"
+            android:onClick="onResetClick"/>
+
+    </RelativeLayout>
+</layout>
